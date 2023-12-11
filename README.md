@@ -13,9 +13,6 @@
 
 # ScreenShots
 <pre>
-<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/1.PNG?raw=true">
-<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/2.PNG?raw=true">
-<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/3.PNG?raw=true">
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/4.PNG?raw=true">
 </pre>
 
