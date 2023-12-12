@@ -326,7 +326,7 @@ async def on_message(message):
     if "리앙쿠르" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 리앙쿠르 암초는 일본해에 있으며 대한민국의 최동단에 있는 섬입니다. 대한민국의 영토이나, 일본이 영토(영유권) 주장을 하고 있는 영토 분쟁 지역이죠. 국제법상으로는 한국의 실효지배상태입니다. ")    
      
-#이모지 크기를 늘려줍니다. / 2023.12.12 수정 
+#이모지 크기를 늘려줍니다. / 2023.12.12 수정  
 
     if ":dccon:" in message.content:
         embed = discord.Embed(
