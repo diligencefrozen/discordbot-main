@@ -176,7 +176,7 @@ async def on_message_edit(before, after):
      
     if 금칙어_검사01(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
         await after.delete()
-        await after.channel.send(f"{after.author.mention} 님, 수정된 메시지에서 분란을 조장하는 단어가 검출되었습니다.")
+        await after.channel.send(f"{after.author.mention}님, 수정된 메시지에서 금칙어가 검출되었습니다!")
  
 # banned_patterns02에 등록된 금칙어를 수정한 채팅에서 사용하였을 때 작동함.
 
@@ -193,7 +193,7 @@ async def on_message_edit(before, after):
      
     if 금칙어_검사02(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
         await after.delete()
-        await after.channel.send(f"{after.author.mention} 님, 수정된 메시지에서 금칙어가 검출되었습니다")
+        await after.channel.send(f"{after.author.mention} 님, 수정된 메시지에서 금칙어가 검출되었습니다!")
 
 @app.event
 async def on_ready():
