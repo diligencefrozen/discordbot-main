@@ -183,19 +183,19 @@ async def on_message_edit(before, after):
     if after.channel.id in allowed_channels:
         if any(substring in after.content for substring in ["https://", "http://", "youtu.be", "youtube", "gall.dcinside.com", "news.naver.com", "news.v.daum.net"]):
             await after.delete()
-            await after.channel.send(f"{after.author.mention} 님, 수정 기능을 사용하여 링크 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다.")
+            await after.channel.send(f"{after.author.mention} 님, 수정 기능을 사용하여 링크 공유 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다.")
             return
 
     # 금칙어 검사01 (분란을 조장하는 단어)
     if 금칙어_검사01(after.content):
         await after.delete()
-        await after.channel.send(f"{after.author.mention} 님, 수정 기능을 사용하여 링크 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다. ")
+        await after.channel.send(f"{after.author.mention} 님, 수정 기능을 사용하여 링크 공유 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다. ")
         return
 
     # 금칙어 검사02
     if 금칙어_검사02(after.content):
         await after.delete()
-        await after.channel.send(f"{after.author.mention} 님, 수정 기능을 사용하여 링크 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다. ")
+        await after.channel.send(f"{after.author.mention} 님, 수정 기능을 사용하여 링크 공유 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다. ")
         return
 
 
