@@ -173,7 +173,7 @@ async def 금칙어_검사01(content):
 async def on_message_edit(before, after):
     if 금칙어_검사01(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
         await after.delete()
-        await after.channel.send(f"{after.author.mention},님이 방금 수정하신 채팅에서 분란을 조장하는 단어가 감지되었습니다!")
+        await after.channel.send(f"{after.author.mention},님, 수정은 우리 서버에서 금지되어 있습니다!")
  
 # banned_patterns02에 등록된 금칙어를 수정한 채팅에서 사용하였을 때 작동함.
 
@@ -187,8 +187,23 @@ async def 금칙어_검사02(content):
 async def on_message_edit(before, after):
     if 금칙어_검사02(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
         await after.delete()
-        await after.channel.send(f"{after.author.mention},님이 방금 수정하신 채팅에서 금칙어가 감지되었습니다!")
- 
+        await after.channel.send(f"{after.author.mention},님, 수정은 우리 서버에서 금지되어 있습니다!")
+
+@app.event
+async def on_message_edit(before, after):
+    # 허용된 채널인지 확인
+    if after.channel.id in [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662]:
+        
+        # 링크가 있는지 검사
+        if any(substring in after.content for substring in ["https://", "http://", "youtu.be", "youtube", "gall.dcinside.com", "news.naver.com", "news.v.daum.net"]):
+            await after.delete()
+            await after.channel.send(f"{after.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
+            return
+        
+        if 금칙어_검사03(after.content):
+            await after.delete()
+            await after.channel.send(f"{after.author.mention},님, 수정은 우리 서버에서 금지되어 있습니다!")
+
 @app.event
 async def on_ready():
     print("I'm logging in.")  
