@@ -140,6 +140,8 @@ banned_patterns02 = [
     # 여기에 추가적인 패턴들을 넣을 수 있습니다.
 ]
 
+allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662, 1176877764608004156]
+
 president_patterns01 = [
     re.compile(r"재[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+인"),   
     re.compile(r"재[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+앙"), 
@@ -161,33 +163,41 @@ president_patterns04 = [
     re.compile(r"두[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+창"), 
 ]
 
-# banned_patterns에 등록된 분란을 조장하는 단어를 수정한 채팅에서 사용하였을 때 작동함.
-
+# 금칙어 검사01: 분란을 조장하는 단어
 async def 금칙어_검사01(content):
     for pattern in banned_patterns:
         if pattern.search(content):
             return True
     return False
- 
-@app.event
-async def on_message_edit(before, after):
-    if 금칙어_검사01(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
-        await after.delete()
-        await after.channel.send(f"{after.author.mention},님의 수정된 채팅에서 금칙어가 감지되었습니다!")
- 
-# banned_patterns02에 등록된 금칙어를 수정한 채팅에서 사용하였을 때 작동함.
 
+# 금칙어 검사02: 일반 금칙어
 async def 금칙어_검사02(content):
     for pattern in banned_patterns02:
         if pattern.search(content):
             return True
     return False
- 
+
 @app.event
 async def on_message_edit(before, after):
-    if 금칙어_검사02(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
+    # 허용된 채널에서 링크가 있는지 검사
+    if after.channel.id in allowed_channels:
+        if any(substring in after.content for substring in ["https://", "http://", "youtu.be", "youtube", "gall.dcinside.com", "news.naver.com", "news.v.daum.net"]):
+            await after.delete()
+            await after.channel.send(f"{after.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
+            return
+
+    # 금칙어 검사01 (분란을 조장하는 단어)
+    if 금칙어_검사01(after.content):
         await after.delete()
-        await after.channel.send(f"{after.author.mention},님의 수정된 채팅에서 금칙어가 감지되었습니다!")
+        await after.channel.send(f"{after.author.mention},님, 수정 기능을 사용하여 링크 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다. ")
+        return
+
+    # 금칙어 검사02
+    if 금칙어_검사02(after.content):
+        await after.delete()
+        await after.channel.send(f"{after.author.mention},님, 수정 기능을 사용하여 링크 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다. ")
+        return
+
 
 @app.event
 async def on_ready():
@@ -1627,7 +1637,7 @@ async def on_message(message):
 
 #사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2023.09.25 수정 
 
-    allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662]
+    allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662, 1176877764608004156]
 
     if message.channel.id in allowed_channels:
         if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
@@ -2493,7 +2503,6 @@ async def on_message(message):
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
          await message.channel.send( embed=embed)     
-     
      
 accross_token = os.environ["BOT_TOKEN"]                            
 app.run(accross_token)
