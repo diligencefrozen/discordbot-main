@@ -162,6 +162,12 @@ president_patterns04 = [
 ]
 
 @app.event
+async def on_message_edit(before, after):
+    if 금칙어_검사(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
+        await after.delete()
+        await after.channel.send(f"{after.author.mention},님이 방금 수정하신 채팅에서 금칙어가 감지되었습니다!")
+ 
+@app.event
 async def on_ready():
     print("I'm logging in.")  
     print(app.user.name)                                   
@@ -1256,7 +1262,6 @@ async def on_message(message):
             return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
          
 #사용자들이 자주 언급한 분란을 조장하는 단어를 제재함. (기존 버전) / 2023.11.11 수정 
-
 
     if "알람" in message.content:
          await message.delete()
