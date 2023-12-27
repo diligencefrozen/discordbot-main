@@ -160,22 +160,6 @@ president_patterns04 = [
     re.compile(r"석[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+렬"), 
     re.compile(r"두[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+창"), 
 ]
-
-
-#욕설을 제재함. (수정된 메세지도 검사함.) / 2023.12.27 수정 
-
-@app.event
-async def on_message_edit(before, after):
-    # 메시지가 봇에 의해 보내진 경우 검사를 건너뜁니다.
-    if after.author.bot:
-        return
-
-    # 수정 후 메시지에서 금칙어 검사
-    for pattern in banned_patterns02:
-        if pattern.search(after.content):
-            await after.delete()
-            await after.channel.send(f"{after.author.mention} 수정된 메시지에서 금칙어가 검출되었습니다!")
-            return  # 금칙어를 찾으면 메시지를 삭제하고 경고한 후 함수를 종료합니다.
          
 @app.event
 async def on_ready():
