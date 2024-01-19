@@ -7,19 +7,13 @@
   It means that versions up to 3.9 will be supported,<br/> but from 3.10 onwards,<br/> the support is discontinued.<br/>
   If there's a need to add more features,<br/> I'm considering rewriting the code from scratch using either C# or JavaScript.</p></b><br/>
 # Introducing <s>기존</s> tbBOT( 도리봇 )
-<style><h3>한글</h3><br />
-<pre>
-도리봇은 2020년 12월 27일 미국 캘리포니아에서 태어났습니다. 
-현재 도리봇은 열심히 구글링을 하며 무수히 많은 정보들을 수집할뿐만 아니라 학습하고 있습니다. 
-도리봇의 취미는 유튜브와 넷플릭스를 밤새도록 보는 것 입니다.
-</pre></style>
 
-# ScreenShots
+# Screenshots
 <pre>
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/4.PNG?raw=true">
 </pre>
 
-# 자주 언급되는 단어들
+# Frequently Mentioned Words
 <pre>
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/BSM_02.png?raw=true">
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/ASM_02.png?raw=true">
