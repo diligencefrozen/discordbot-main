@@ -6,6 +6,7 @@
   Back in August 2021, <br/>it was announced on Discord about the end of support for newer versions of Python.<br/>
   It means that versions up to 3.9 will be supported,<br/> but from 3.10 onwards,<br/> the support is discontinued.<br/>
   If there's a need to add more features,<br/> I'm considering rewriting the code from scratch using either C# or JavaScript.</p></b><br/>
+
 # Introducing <s>기존</s> tbBOT( 도리봇 )
 
 # Screenshots
