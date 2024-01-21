@@ -1575,7 +1575,33 @@ async def on_message(message):
  
     if "일본해" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 일본해는 대한민국, 북한, 러시아, 일본에 둘러싸여 있는 바다입니다. 한반도의 동쪽, 일본 열도의 서쪽, 러시아 프리모리예 지방의 남쪽에 있죠. 일본해는 크게는 서태평양의 연안해로 볼 수 있으며, 동아시아의 동쪽에 끝에 위치합니다.")   
+     
+#올바른 단어를 사용합시다. / 2024.01.22 수정   
  
+    if "저출산" in message.content:
+        await message.delete()     
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 성차별적인 단어입니다. 저출생이 옳은 표현이죠.")   
+ 
+    if "유모차" in message.content:
+        await message.delete()     
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 성차별적인 단어입니다. 유아차가 옳은 표현이죠.")  
+ 
+    if "출산율" in message.content or "출산률" in message.content:
+        await message.delete()     
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 성차별적인 단어입니다. 출생율 또는 출생률이 옳은 표현이죠.")  
+ 
+    if "자궁" in message.content:
+        await message.delete()     
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 성차별적인 단어입니다. 포궁이 옳은 표현이죠.")  
+ 
+    if "몰래카메라" in message.content:
+        await message.delete()     
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 성차별적인 단어입니다. 불법촬영이 옳은 표현이죠.")  
+ 
+    if "리벤지포르노" in message.content:
+        await message.delete()     
+        await message.channel.send(f"{message.author.mention} 님, 해당 단어는 성차별적인 단어입니다. 디지털성범죄가 옳은 표현이죠.")  
+     
 #자살유발정보에 대응합니다. / 2023.09.25 수정 
 
     if "자살" in message.content or "죽고싶다" in message.content or "질소가스" in message.content:
