@@ -74,6 +74,9 @@ banned_patterns = [
     re.compile(r"공산[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+당"),
     re.compile(r"진[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+핑"),
     re.compile(r"짱[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+꺠"),
+    re.compile(r"어쩌라[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+고"),
+    re.compile(r"어쩌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+라고"),
+    re.compile(r"어[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+쩌라고"),
     # 여기에 추가적인 패턴들을 넣을 수 있습니다.
 ]
 
@@ -1026,7 +1029,11 @@ async def on_message(message):
     if "짱꺠" in message.content:
          await message.delete()
          await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
- 
+
+    if "어쩌라고" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
+     
    #if "좌좀" in message.content:
         #await message.delete()
         #await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.") 
