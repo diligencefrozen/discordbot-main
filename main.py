@@ -64,6 +64,16 @@ banned_patterns = [
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+파"), 
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+빨"), 
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+익"), 
+    re.compile(r"개[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+소리"),
+    re.compile(r"개소[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+리"),
+    re.compile(r"화[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+나요"),
+    re.compile(r"화나[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+요"),
+    re.compile(r"천[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+안문"),
+    re.compile(r"천안[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+문"),
+    re.compile(r"공[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+산당"),
+    re.compile(r"공산[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+당"),
+    re.compile(r"진[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+핑"),
+    re.compile(r"짱[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+꺠"),
     # 여기에 추가적인 패턴들을 넣을 수 있습니다.
 ]
 
@@ -989,6 +999,34 @@ async def on_message(message):
          await message.delete()
          await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.") 
 
+    if "개소리" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.") 
+
+    if "천안문" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")  
+
+    if "공산당" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.") 
+
+    if "재명" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")  
+
+    if "화나요" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.") 
+
+    if "진핑" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
+
+    if "짱꺠" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
+ 
    #if "좌좀" in message.content:
         #await message.delete()
         #await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.") 
