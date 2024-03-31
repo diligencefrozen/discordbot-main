@@ -77,6 +77,8 @@ banned_patterns = [
     re.compile(r"어쩌라[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+고"),
     re.compile(r"어쩌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+라고"),
     re.compile(r"어[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+쩌라고"),
+    re.compile(r"탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+주"),
+    re.compile(r"탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+출"),
     # 여기에 추가적인 패턴들을 넣을 수 있습니다.
 ]
 
@@ -1031,6 +1033,14 @@ async def on_message(message):
          await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
 
     if "어쩌라고" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
+
+    if "탈주" in message.content:
+         await message.delete()
+         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
+
+    if "탈출" in message.content:
          await message.delete()
          await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
      
