@@ -64,7 +64,7 @@ banned_patterns = [
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+파"), 
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+빨"), 
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+익"), 
-    re.compile(r"탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+주"),
+  # re.compile(r"탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+주"),
     # 여기에 추가적인 패턴들을 넣을 수 있습니다.
 ]
 
