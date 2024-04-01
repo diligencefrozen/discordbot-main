@@ -990,9 +990,9 @@ async def on_message(message):
          await message.delete()
          await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")  
 
-    if "탈주" in message.content:
-         await message.delete()
-         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
+   #if "탈주" in message.content:
+        #await message.delete()
+        #await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")   
      
    #if "좌좀" in message.content:
         #await message.delete()
