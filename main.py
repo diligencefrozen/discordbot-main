@@ -329,6 +329,20 @@ async def on_message(message):
      
 #이모지 크기를 늘려줍니다. / 2024.03.23 수정  
 
+    if ":rage:" in message.content:
+        embed = discord.Embed(
+        title='해당 기능은 Beta 버전 입니다.',
+        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
+
+        )
+
+        urlBase = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qv1N2hYU9DXZba0nqkg30R5srxDF2WUJVPjlN-jwXA&s'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        #await message.delete()     
+        await message.channel.send( embed=embed) 
+     
     if ":dccon:" in message.content:
         embed = discord.Embed(
         title='이모지 크기를 강제로 확대했습니다.',
