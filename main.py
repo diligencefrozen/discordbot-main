@@ -52,14 +52,14 @@ app = discord.Client()
 banned_patterns = [
     re.compile(r"알[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+람"),   
     re.compile(r"알[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+림"),   
-    re.compile(r"하[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+남자"), 
-    re.compile(r"하남[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+자"), 
+  # re.compile(r"하[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+남자"), 
+  # re.compile(r"하남[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+자"), 
     re.compile(r"찬[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+민"),
-    re.compile(r"탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+모"),
-    re.compile(r"미[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+필"), 
+  # re.compile(r"탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+모"),
+  # re.compile(r"미[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+필"), 
   # re.compile(r"군[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+대"), 
     re.compile(r"자[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+삭"), 
-    re.compile(r"차[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+단"), 
+  # re.compile(r"차[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+단"), 
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+좀"),   
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+파"), 
   # re.compile(r"좌[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+빨"), 
@@ -76,7 +76,7 @@ banned_patterns02 = [
     re.compile(r"애[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+미"),
     re.compile(r"에[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+미"), 
     re.compile(r"새[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+끼"), 
-    re.compile(r"난[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+교"), 
+  # re.compile(r"난[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+교"), 
     re.compile(r"븅[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+신"), 
     re.compile(r"보[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+지"), 
     re.compile(r"ㅅ[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ㅂ"), 
@@ -90,12 +90,12 @@ banned_patterns02 = [
     re.compile(r"미[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+친"), 
     re.compile(r"존[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+나"), 
     re.compile(r"ㅈ[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ㄴ"), 
-    re.compile(r"닥[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+치"), 
+  # re.compile(r"닥[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+치"), 
     re.compile(r"ㄷ[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ㅊ"), 
     re.compile(r"닥[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+쳐"), 
-    re.compile(r"꺼[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+져"), 
+  # re.compile(r"꺼[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+져"), 
     re.compile(r"노[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+무"), 
-    re.compile(r"꺼[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+지"), 
+  # re.compile(r"꺼[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+지"), 
     re.compile(r"ㄲ[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ㅈ"),  
     re.compile(r"지[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+랄"), 
     re.compile(r"시[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+팔"), 
@@ -107,33 +107,33 @@ banned_patterns02 = [
     re.compile(r"패[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+미"),  
     re.compile(r"장[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+애"), 
     re.compile(r"계[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+집"), 
-    re.compile(r"븅[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+띤"), 
+  # re.compile(r"븅[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+띤"), 
     re.compile(r"정[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+공"), 
-    re.compile(r"치[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+매"),  
-    re.compile(r"시[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+드방"), 
-    re.compile(r"시드[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+방"),
-    re.compile(r"또[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+라이"), 
-    re.compile(r"또라[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"), 
-    re.compile(r"도[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+라이"), 
-    re.compile(r"도라[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"),
-    re.compile(r"피[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+싸개"), 
-    re.compile(r"피싸[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+개"),
-    re.compile(r"정[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+신병"), 
-    re.compile(r"정신[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+병"),
-    re.compile(r"조[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+선족"), 
-    re.compile(r"조선[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+족"), 
-    re.compile(r"쪽[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+바리"), 
-    re.compile(r"쪽바[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+리"), 
-    re.compile(r"쪽[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+발이"), 
-    re.compile(r"쪽발[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"), 
-    re.compile(r"쪽[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+팔이"), 
-    re.compile(r"쪽팔[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"), 
-    re.compile(r"쪽[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+빨이"), 
-    re.compile(r"쪽빨[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"), 
-    re.compile(r"아[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+가리"), 
-    re.compile(r"아가[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+리"), 
-    re.compile(r"ㅇ[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ㄱㄹ"),  
-    re.compile(r"ㅇㄱ[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ㄹ"), 
+  # re.compile(r"치[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+매"),  
+  # 1re.compile(r"시[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+드방"), 
+  # re.compile(r"시드[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+방"),
+  # re.compile(r"또[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+라이"), 
+  # re.compile(r"또라[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"), 
+  # re.compile(r"도[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+라이"), 
+  # re.compile(r"도라[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"),
+  # re.compile(r"피[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+싸개"), 
+  # re.compile(r"피싸[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+개"),
+  # re.compile(r"정[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+신병"), 
+  # re.compile(r"정신[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+병"),
+  # re.compile(r"조[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+선족"), 
+  # re.compile(r"조선[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+족"), 
+  # re.compile(r"쪽[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+바리"), 
+  # re.compile(r"쪽바[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+리"), 
+  # re.compile(r"쪽[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+발이"), 
+  # re.compile(r"쪽발[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"), 
+  # re.compile(r"쪽[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+팔이"), 
+  # re.compile(r"쪽팔[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"), 
+  # re.compile(r"쪽[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+빨이"), 
+  # re.compile(r"쪽빨[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+이"), 
+  # re.compile(r"아[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+가리"), 
+  # re.compile(r"아가[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+리"), 
+  # re.compile(r"ㅇ[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ㄱㄹ"),  
+  # re.compile(r"ㅇㄱ[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ㄹ"), 
     re.compile(r"씹[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+놈"),  
     re.compile(r"씹[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+년"), 
     re.compile(r"십[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+놈"),  
@@ -966,7 +966,7 @@ async def on_message(message):
             await message.channel.send(f"{message.author.mention} 님의 채팅에서 분란을 조장하는 금칙어를 감지했습니다.")
             return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
          
-#사용자들이 자주 언급한 분란을 조장하는 단어를 제재함. (기존 버전) / 2023.11.11 수정 
+#사용자들이 자주 언급한 분란을 조장하는 단어를 제재함. (기존 버전) / 2024.04.14 수정 
 
     if "알람" in message.content:
          await message.delete()
@@ -976,21 +976,21 @@ async def on_message(message):
          await message.delete()
          await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")           
  
-    if "하남자" in message.content:
-         await message.delete()
-         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")    
+   #if "하남자" in message.content:
+        #await message.delete()
+        #await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")    
 
     if "찬민" in message.content:
          await message.delete()
          await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")
 
-    if "탈모" in message.content:
-         await message.delete()
-         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")
+   #if "탈모" in message.content:
+        #await message.delete()
+        #await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")
 
-    if "미필" in message.content:
-         await message.delete()
-         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")
+   #if "미필" in message.content:
+        #await message.delete()
+        #await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")
 
    #if "군대" in message.content:
         #await message.delete()
@@ -1000,9 +1000,9 @@ async def on_message(message):
          await message.delete()
          await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")    
 
-    if "차단" in message.content:
-         await message.delete()
-         await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")  
+   #if "차단" in message.content:
+        #await message.delete()
+        #await message.channel.send(f"{message.author.mention} 님의 채팅은 분란을 조장합니다.")  
 
    #if "탈주" in message.content:
         #await message.delete()
@@ -1032,7 +1032,7 @@ async def on_message(message):
             await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다. ")
             return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
 
-#욕설을 제재함. (기존 버전) / 2023.11.12 수정 
+#욕설을 제재함. (기존 버전) / 2024.04.14 수정 
        
     if "섹스" in message.content:
         await message.delete()
@@ -1062,9 +1062,9 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "난교" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "난교" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
     if "븅신" in message.content:
         await message.delete()
@@ -1118,9 +1118,9 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "닥치" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "닥치" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
     if "닥쳐" in message.content:
         await message.delete()
@@ -1130,13 +1130,13 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
      
-    if "꺼져" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "꺼져" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "꺼지" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "꺼지" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
     if "노무" in message.content:
         await message.delete()
@@ -1186,65 +1186,65 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "븅띤" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "븅띤" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
     if "정공" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "치매" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
+   #if "치매" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
        
-    if "시드방" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "시드방" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
      
-    if "또라이" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
+   #if "또라이" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
      
-    if "도라이" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "도라이" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "피싸개" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "피싸개" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "정신병" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "정신병" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "조선족" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
+   #if "조선족" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
        
-    if "쪽바리" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "쪽바리" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "쪽발이" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "쪽발이" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "쪽팔이" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "쪽팔이" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
      
-    if "쪽빨이" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
+   #if "쪽빨이" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.") 
      
-    if "아가리" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "아가리" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
        
-    if "ㅇㄱㄹ" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
+   #if "ㅇㄱㄹ" in message.content:
+       #await message.delete()
+       #await message.channel.send(f"{message.author.mention} 님의 채팅에서 금칙어를 감지했습니다.")  
      
    #if "씹" in message.content:
        #await message.delete()
