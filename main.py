@@ -345,16 +345,16 @@ async def on_message(message):
      
     if ":dccon:" in message.content:
         embed = discord.Embed(
-        title='이모지 크기를 강제로 확대했습니다.',
-        description='해당 기능은 Beta 버전 입니다.',
-
+            title='이모지 크기 확대',
+            description='해당 기능은 Beta 버전입니다.',
+            color=0x3498db  # 파란색
         )
+        embed.set_image(url='https://i.imgur.com/kJDrG0s.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/kJDrG0s.png")
+        await message.channel.send(embed=embed)
+        return
 
-        urlBase = 'https://i.imgur.com/kJDrG0s.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        await message.channel.send( embed=embed)  
+    await app.process_commands(message)
 
     if ":01:" in message.content:     
         embed = discord.Embed(
