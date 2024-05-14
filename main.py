@@ -345,12 +345,12 @@ async def on_message(message):
      
     if ":dccon:" in message.content:
         embed = discord.Embed(
-            title='이모지 크기 확대',
-            description='해당 기능은 Beta 버전입니다.',
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
             color=0x3498db  # 파란색
         )
         embed.set_image(url='https://i.imgur.com/kJDrG0s.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/kJDrG0s.png")
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
