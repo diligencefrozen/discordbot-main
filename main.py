@@ -328,20 +328,17 @@ async def on_message(message):
         await message.channel.send(f"{message.author.mention} 님, 리앙쿠르 암초는 일본해에 있으며 대한민국의 최동단에 있는 섬입니다. 대한민국의 영토이나, 일본이 영토(영유권) 주장을 하고 있는 영토 분쟁 지역이죠. 국제법상으로는 한국의 실효지배상태입니다. ")    
      
 #이모지 크기를 늘려줍니다. / 2024.05.15 수정  
-
+     
     if ":rage:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님의 이모지 확대',
+            color=0xff0000  # 빨간색
         )
-
-        urlBase = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qv1N2hYU9DXZba0nqkg30R5srxDF2WUJVPjlN-jwXA&s'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
+        embed.set_image(url='https://i.imgur.com/rnH9hSG.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return 
      
     if ":dccon:" in message.content:
         embed = discord.Embed(
