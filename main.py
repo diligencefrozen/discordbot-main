@@ -22,7 +22,7 @@ from urllib.request import urlopen, Request
 from discord.ext import tasks
 from pytz import timezone
 from discord.ext import tasks
-
+ 
 app = discord.Client()
 #app = discord.Client(intents=discord.Intents.all())
 #새로운 버전의 파이썬부터는 위의 코드를 실행하면 프로그램이 실행되지 않는다.  
@@ -211,7 +211,7 @@ async def on_message(message):
         embed.add_field(name ='=MBTI', value = "MBTI에 대한 정보가 궁금하세요?",inline = False)      
         embed.add_field(name ='=허락', value = "도리봇이 오늘 게임을 해도 되는 날인지 점을 쳐줄것입니다.",inline = False)  
         embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False)  
-        await message.channel.send(channel,embed=embed)  
+        await message.channel.send(channel,embed=embed)                                                    
 
  #사용자의 웃음관련 키워드에 반응함 / 2023.08.16 수정   
  
