@@ -213,14 +213,6 @@ async def on_message(message):
         embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False)  
         await message.channel.send(channel,embed=embed)  
 
- 
- # 이미지가 포함된 메시지를 감지함 / 2024.06.13 수정
- 
-    if message.attachments:
-        for attachment in message.attachments:
-            if attachment.url.lower().endswith(('png', 'jpg', 'jpeg', 'gif', 'bmp', 'tiff', 'webp', 'svg', 'ico', 'heif', 'heic')):
-                await message.channel.send(f"{message.author.mention}님, 소중한 사진을 공유하셨네요! 감사해요.")
-
  #사용자의 웃음관련 키워드에 반응함 / 2023.08.16 수정   
  
     if "ㅋㅋ" in message.content or "하하" in message.content or "히히" in message.content or "호호" in message.content or "ㅎㅎ" in message.content or "크크" in message.content:
