@@ -256,7 +256,7 @@ async def on_message(message):
     if "Nodong" in message.content or "NODONG" in message.content or "nodong" in message.content or "노동" in message.content or "로동" in message.content or "취업" in message.content or "근무지" in message.content or "직장" in message.content or "직업" in message.content or "일터" in message.content:
         embed = discord.Embed(
             title="⚒️ 만국의 노동자여 단결하라 ⚒️",
-            description="**모두의 권리를 위해, 하나로 뭉치자!**\n\n🏳️‍🌈 만국의 차별받는 모든 노동자와 성소수자들을 위하여!",
+            description="**모두의 권리를 위해, 하나로 뭉치자!**",
             color=0x8B0000  # Dark Red Color
         )
         embed.set_footer(text="노동은 우리의 힘이자, 미래입니다.", icon_url="https://i.imgur.com/5A9j5d5.png")
@@ -268,7 +268,7 @@ async def on_message(message):
         if pattern.search(message.content):
             embed = discord.Embed(
                 title="⚒️ 만국의 노동자여 단결하라 ⚒️",
-                description="**모두의 권리를 위해, 하나로 뭉치자!**\n\n🏳️‍🌈 만국의 차별받는 모든 노동자와 성소수자들을 위하여!",
+                description="**모두의 권리를 위해, 하나로 뭉치자!**",
                 color=0x8B0000  # Dark Red Color
             )
             embed.set_footer(text="노동은 우리의 힘이자, 미래입니다.", icon_url="https://i.imgur.com/5A9j5d5.png")
