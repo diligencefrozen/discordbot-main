@@ -253,7 +253,7 @@ async def on_message(message):
 
  #사용자의 노동 관련 키워드에 반응함 / 2024.08.10 수정
 
-    if "Nodong" in message.content or "NODONG" in message.content or "nodong" in message.content or "노동" in message.content or "로동" in message.content:
+    if "Nodong" in message.content or "NODONG" in message.content or "nodong" in message.content or "노동" in message.content or "로동" in message.content or "취업" in message.content or "근무지" in message.content or "직장" in message.content or "직업" in message.content or "일터" in message.content:
         embed = discord.Embed(
             title="⚒️ 만국의 노동자여 단결하라 ⚒️",
             description="**모두의 권리를 위해, 하나로 뭉치자!**\n\n🏳️‍🌈 만국의 차별받는 모든 노동자와 성소수자들을 위하여!",
