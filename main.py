@@ -17,6 +17,11 @@ from urllib.request import URLError, HTTPError, urlopen, Request
 from bs4 import BeautifulSoup
 from pytz import timezone
 
+intents = discord.Intents.default()
+intents.messages = True
+intents.message_content = True
+intents.guilds = True
+intents.members = True
  
 app = discord.Client()
 #app = discord.Client(intents=discord.Intents.all())
