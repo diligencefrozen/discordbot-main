@@ -17,6 +17,11 @@ from urllib.request import URLError, HTTPError, urlopen, Request
 from bs4 import BeautifulSoup
 from pytz import timezone
 
+# 마지막 알림 시간을 저장할 딕셔너리
+typing_users_last_alert = {}
+
+KST = timezone('Asia/Seoul')
+
 intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
@@ -373,9 +378,10 @@ async def on_message_edit(before, after):
         embed.set_footer(text=f"Edited at {time}")
         await after.channel.send(embed=embed)
 
-# 채팅 타이핑 감지 / 2024.08.11 수정 
+# 채팅 타이핑 감지 / 2024.08.12 수정 
 
-@bot.event
+
+@app.event
 async def on_typing(channel, user, when):
     if user.bot:
         return
@@ -393,7 +399,7 @@ async def on_typing(channel, user, when):
     when_kst = when.astimezone(KST)
     embed = discord.Embed(
         title="⌨️ Typing Detected",
-        description=f"{user.mention} 님, 오늘 하루도 출석해주셔서 감사합니다.",
+        description=f"{user.mention} 님, 오늘도 출석해주셔서 감사해요.",
         color=0x00ff00
     )
     embed.set_footer(text=f"타이핑 시작 시간: {when_kst.strftime('%Y-%m-%d %H:%M:%S')}")
