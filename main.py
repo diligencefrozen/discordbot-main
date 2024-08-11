@@ -17,9 +17,15 @@ from urllib.request import URLError, HTTPError, urlopen, Request
 from bs4 import BeautifulSoup
 from pytz import timezone
 
- 
-app = discord.Client()
+#intents = discord.Intents.default()
+#intents.messages = True
+#intents.message_content = True
+#intents.guilds = True
+#intents.members = True
+
+#app = discord.Client()
 #app = discord.Client(intents=discord.Intents.all())
+app = discord.Client(intents=intents)
 #새로운 버전의 파이썬부터는 위의 코드를 실행하면 프로그램이 실행되지 않는다.  
 
 #@tasks.loop(hours=72)
