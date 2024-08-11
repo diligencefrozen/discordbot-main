@@ -271,7 +271,7 @@ async def on_message(message):
         embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False)  
         await message.channel.send(channel,embed=embed)                                                    
  
-    # 파일 업로드 감지
+    # 파일 업로드 감지 / 2024.08.11 수정   
     if message.attachments:
         for attachment in message.attachments:
             # 지원하는 확장자 목록 (이미지, 문서, 비디오 등)
@@ -374,7 +374,7 @@ async def on_message(message):
         # 채널에 임베드 메시지 전송
         await message.channel.send(embed=embed)
 
-# 서버 사용자가 다른 서버 사용자를 멘션하면, 봇이 대응 합니다.
+# 서버 사용자가 다른 서버 사용자를 멘션하면, 봇이 대응 합니다. / 2024.08.11 수정   
     if message.mentions:
         mentioned_users = ", ".join([user.mention for user in message.mentions])
 
