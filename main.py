@@ -270,7 +270,31 @@ async def on_message(message):
         embed.add_field(name ='=허락', value = "도리봇이 오늘 게임을 해도 되는 날인지 점을 쳐줄것입니다.",inline = False)  
         embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False)  
         await message.channel.send(channel,embed=embed)                                                    
+ 
+    # 파일 업로드 감지
+    if message.attachments:
+        for attachment in message.attachments:
+            # 지원하는 확장자 목록 (이미지, 문서, 비디오 등)
+            supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
+                                    'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt',
+                                    'mp4', 'mkv', 'mov', 'avi', 'wmv', 'flv', 'm4v', 'mp3', 'wav', 'ogg']
 
+            if any(attachment.filename.lower().endswith(ext) for ext in supported_extensions):
+                # 임베드 메시지로 파일 업로드에 반응
+                embed = discord.Embed(
+                    title="오늘도 커뮤니티에 기여해주셔서 감사합니다!",
+                    description=f"{message.author.mention} 님이 파일을 업로드했습니다.",
+                    color=0x00ff00
+                )
+                embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
+                embed.set_footer(text="파일 업로드를 확인했습니다.")
+                
+                # 이미지 파일일 경우 미리보기 추가
+                if attachment.filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
+                    embed.set_image(url=attachment.url)
+
+                await message.channel.send(embed=embed)
+             
  #사용자의 웃음관련 키워드에 반응함 / 2023.08.16 수정   
  
     if "ㅋㅋ" in message.content or "하하" in message.content or "히히" in message.content or "호호" in message.content or "ㅎㅎ" in message.content or "크크" in message.content:
