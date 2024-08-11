@@ -371,7 +371,40 @@ async def on_message_edit(before, after):
         embed.add_field(name="After", value=after.content, inline=False)
         embed.set_footer(text=f"Edited at {time}")
         await after.channel.send(embed=embed)
-     
+
+# 채팅 타이핑 감지 / 2024.08.11 수정 
+typing_users = {}
+
+@app.event
+async def on_typing(channel, user, when):
+    # 봇이 아닌 사용자만 반응
+    if not user.bot:
+        # 타이핑을 시작했음을 알리는 메시지 전송
+        embed = discord.Embed(
+            title="⌨️ Typing Detected",
+            description=f"{user.mention} 님이 메세지를 입력중 입니다.",
+            color=0x00ff00
+        )
+        embed.set_footer(text=f"타이핑 시작 시간: {when.strftime('%Y-%m-%d %H:%M:%S')}")
+        await channel.send(embed=embed)
+
+        # 타이핑 사용자 저장
+        typing_users[user.id] = when
+
+        # 일정 시간이 지나면 타이핑 중단을 알리는 메시지 전송
+        await asyncio.sleep(5)  # 5초 후에 타이핑 중단으로 간주
+
+        # 사용자가 아직 타이핑 중이 아니면 타이핑 중단 메시지 전송
+        if typing_users.get(user.id) == when:
+            embed = discord.Embed(
+                title="⌨️ Typing Stopped",
+                description=f"{user.mention} 님이 타이핑을 중단했습니다.",
+                color=0xff0000
+            )
+            embed.set_footer(text="타이핑이 중단된 것으로 추정됩니다.")
+            await channel.send(embed=embed)
+            del typing_users[user.id]
+         
  #사용자의 웃음관련 키워드에 반응함 / 2023.08.16 수정   
  
     if "ㅋㅋ" in message.content or "하하" in message.content or "히히" in message.content or "호호" in message.content or "ㅎㅎ" in message.content or "크크" in message.content:
