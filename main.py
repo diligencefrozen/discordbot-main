@@ -276,15 +276,19 @@ async def on_message(message):
         embed.add_field(name ='=허락', value = "도리봇이 오늘 게임을 해도 되는 날인지 점을 쳐줄것입니다.",inline = False)  
         embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False)  
         await message.channel.send(channel,embed=embed)                                                    
- 
+
     # 파일 업로드 감지 / 2024.08.11 수정   
     if message.attachments:
         for attachment in message.attachments:
-            # 지원하는 확장자 목록 (이미지, 문서, 비디오 등)
-            supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
-                                    'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt',
-                                    'mp4', 'mkv', 'mov', 'avi', 'wmv', 'flv', 'm4v', 'mp3', 'wav', 'ogg']
+            # 지원하는 확장자 목록 (이미지, 문서, 비디오, 오디오 등)
+            supported_extensions = [
+                'jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',  # 이미지
+                'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt', 'hwp', 'hwpx',  # 문서
+                'mp4', 'mkv', 'mov', 'avi', 'wmv', 'flv', 'm4v',  # 비디오
+                'mp3', 'wav', 'ogg'  # 오디오
+            ]
 
+            # 파일 확장자가 지원하는 목록에 있는지 확인
             if any(attachment.filename.lower().endswith(ext) for ext in supported_extensions):
                 # 임베드 메시지로 파일 업로드에 반응
                 embed = discord.Embed(
@@ -294,12 +298,34 @@ async def on_message(message):
                 )
                 embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
                 embed.set_footer(text="파일 업로드를 확인했습니다.")
-                
+
                 # 이미지 파일일 경우 미리보기 추가
                 if attachment.filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
                     embed.set_image(url=attachment.url)
 
-                await message.channel.send(embed=embed)
+                # PDF 파일일 경우 미리보기 링크 추가
+                elif attachment.filename.lower().endswith('pdf'):
+                    embed.add_field(name="PDF 미리보기", value=f"[여기를 클릭하여 PDF 파일 보기]({attachment.url})", inline=False)
+
+                # 텍스트 파일일 경우 텍스트 미리보기 추가 (최대 1000자)
+                elif attachment.filename.lower().endswith('txt'):
+                    try:
+                        text_content = (await attachment.read()).decode('utf-8')
+                        if len(text_content) > 1000:
+                            text_content = text_content[:1000] + '...'
+                        embed.add_field(name="텍스트 미리보기", value=text_content, inline=False)
+                    except:
+                        embed.add_field(name="텍스트 미리보기", value="텍스트 파일을 읽는 중 오류가 발생했습니다.", inline=False)
+
+                # 동영상 파일일 경우 미리보기 링크 추가
+                elif attachment.filename.lower().endswith(('mp4', 'mkv', 'mov', 'avi', 'wmv', 'flv', 'm4v')):
+                    embed.add_field(name="비디오 미리보기", value=f"[여기를 클릭하여 비디오 파일 보기]({attachment.url})", inline=False)
+
+                # 오디오 파일일 경우 미리보기 링크 추가
+                elif attachment.filename.lower().endswith(('mp3', 'wav', 'ogg')):
+                    embed.add_field(name="오디오 미리보기", value=f"[여기를 클릭하여 오디오 파일 듣기]({attachment.url})", inline=False)
+
+                await message.channel.send(embed=embed)           
     
 # 사용자가 다른 사용자의 메시지에 답장하면, 봇이 대응합니다. / 2024.08.11 수정 
     if message.reference:
