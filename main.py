@@ -373,6 +373,20 @@ async def on_message(message):
 
         # 채널에 임베드 메시지 전송
         await message.channel.send(embed=embed)
+
+# 서버 사용자가 다른 서버 사용자를 멘션하면, 봇이 대응 합니다.
+    if message.mentions:
+        mentioned_users = ", ".join([user.mention for user in message.mentions])
+
+        # 멘션에 반응 - 이미지 포함
+        embed = discord.Embed(
+            title="📢 멘션 감지 📢",
+            description=f"{message.author.mention} 님이 {mentioned_users} 님을 호출했습니다.",
+            color=0x00ff00
+        )
+        embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
+        embed.set_footer(text="멘션을 확인했습니다.")
+        await message.channel.send(embed=embed)
      
  #음식을 추천합니다. / 2023.08.16 수정        
 
