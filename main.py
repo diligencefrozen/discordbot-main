@@ -22,7 +22,8 @@ intents.messages = True
 intents.message_content = True
 intents.guilds = True
 intents.members = True
- 
+intents.typing = True 
+
 #app = discord.Client()
 #app = discord.Client(intents=discord.Intents.all())
 app = discord.Client(intents=intents)
@@ -374,37 +375,32 @@ async def on_message_edit(before, after):
 
 # 채팅 타이핑 감지 / 2024.08.11 수정 
 
-typing_users = {}
-
-KST = timezone('Asia/Seoul')
-
-@app.event
+@bot.event
 async def on_typing(channel, user, when):
-    if not user.bot:
-        # 한국 시간대로 변환
-        when_kst = when.astimezone(KST)
-        # 타이핑 시작 메시지
-        embed = discord.Embed(
-            title="⌨️ Typing Detected",
-            description=f"{user.mention} 님이 메세지를 입력중 입니다.",
-            color=0x00ff00
-        )
-        embed.set_footer(text=f"타이핑 시작 시간: {when_kst.strftime('%Y-%m-%d %H:%M:%S')}")
-        await channel.send(embed=embed)
+    if user.bot:
+        return
 
-        typing_users[user.id] = when
+    current_time = datetime.datetime.now(KST)
 
-        await asyncio.sleep(5)
+    # 사용자가 마지막으로 알림을 받은 시간이 24시간 이내인지 확인
+    if user.id in typing_users_last_alert:
+        last_alert_time = typing_users_last_alert[user.id]
+        time_diff = current_time - last_alert_time
+        if time_diff.total_seconds() < 86400:  # 86400초는 24시간
+            return  # 24시간이 지나지 않았으면 알림을 보내지 않음
 
-        if typing_users.get(user.id) == when:
-            embed = discord.Embed(
-                title="⌨️ Typing Stopped",
-                description=f"{user.mention} 님이 타이핑을 중단했습니다.",
-                color=0xff0000
-            )
-            embed.set_footer(text="타이핑이 중단된 것으로 추정됩니다.")
-            await channel.send(embed=embed)
-            del typing_users[user.id]
+    # 알림 메시지 전송
+    when_kst = when.astimezone(KST)
+    embed = discord.Embed(
+        title="⌨️ Typing Detected",
+        description=f"{user.mention} 님, 오늘 하루도 출석해주셔서 감사합니다.",
+        color=0x00ff00
+    )
+    embed.set_footer(text=f"타이핑 시작 시간: {when_kst.strftime('%Y-%m-%d %H:%M:%S')}")
+    await channel.send(embed=embed)
+
+    # 알림을 보낸 시간 업데이트
+    typing_users_last_alert[user.id] = current_time
          
  #사용자의 웃음관련 키워드에 반응함 / 2023.08.16 수정   
  
