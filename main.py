@@ -17,18 +17,12 @@ from urllib.request import URLError, HTTPError, urlopen, Request
 from bs4 import BeautifulSoup
 from pytz import timezone
 
-# 마지막 알림 시간을 저장할 딕셔너리
-typing_users_last_alert = {}
-
-KST = timezone('Asia/Seoul')
-
 intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
 intents.guilds = True
 intents.members = True
-intents.typing = True 
-
+ 
 #app = discord.Client()
 #app = discord.Client(intents=discord.Intents.all())
 app = discord.Client(intents=intents)
@@ -377,37 +371,7 @@ async def on_message_edit(before, after):
         embed.add_field(name="After", value=after.content, inline=False)
         embed.set_footer(text=f"Edited at {time}")
         await after.channel.send(embed=embed)
-
-# 채팅 타이핑 감지 / 2024.08.12 수정 
-
-
-@app.event
-async def on_typing(channel, user, when):
-    if user.bot:
-        return
-
-    current_time = datetime.datetime.now(KST)
-
-    # 사용자가 마지막으로 알림을 받은 시간이 24시간 이내인지 확인
-    if user.id in typing_users_last_alert:
-        last_alert_time = typing_users_last_alert[user.id]
-        time_diff = current_time - last_alert_time
-        if time_diff.total_seconds() < 86400:  # 86400초는 24시간
-            return  # 24시간이 지나지 않았으면 알림을 보내지 않음
-
-    # 알림 메시지 전송
-    when_kst = when.astimezone(KST)
-    embed = discord.Embed(
-        title="⌨️ Typing Detected",
-        description=f"{user.mention} 님, 오늘도 출석해주셔서 감사해요.",
-        color=0x00ff00
-    )
-    embed.set_footer(text=f"타이핑 시작 시간: {when_kst.strftime('%Y-%m-%d %H:%M:%S')}")
-    await channel.send(embed=embed)
-
-    # 알림을 보낸 시간 업데이트
-    typing_users_last_alert[user.id] = current_time
-         
+     
  #사용자의 웃음관련 키워드에 반응함 / 2023.08.16 수정   
  
     if "ㅋㅋ" in message.content or "하하" in message.content or "히히" in message.content or "호호" in message.content or "ㅎㅎ" in message.content or "크크" in message.content:
