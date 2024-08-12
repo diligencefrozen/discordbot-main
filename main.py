@@ -277,12 +277,12 @@ async def on_message(message):
         embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False)  
         await message.channel.send(channel,embed=embed)                                                    
  
-    # 파일 업로드 감지 / 2024.08.11 수정   
+    # 파일 업로드 감지 / 2024.08.12 수정   
     if message.attachments:
         for attachment in message.attachments:
             # 지원하는 확장자 목록 (이미지, 문서, 비디오 등)
             supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
-                                    'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt',
+                                    'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt', 'hwp', 'hwpx',
                                     'mp4', 'mkv', 'mov', 'avi', 'wmv', 'flv', 'm4v', 'mp3', 'wav', 'ogg']
 
             if any(attachment.filename.lower().endswith(ext) for ext in supported_extensions):
