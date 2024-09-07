@@ -469,7 +469,7 @@ async def on_message(message):
     if "리앙쿠르" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 리앙쿠르 암초는 일본해에 있으며 대한민국의 최동단에 있는 섬입니다. 대한민국의 영토이나, 일본이 영토(영유권) 주장을 하고 있는 영토 분쟁 지역이죠. 국제법상으로는 한국의 실효지배상태입니다. ")    
      
-#이모지 크기를 늘려줍니다. / 2024.06.23 수정  
+#이모지 크기를 늘려줍니다. / 2024.09.07 수정  
 
     if ":dccon:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
@@ -960,6 +960,90 @@ async def on_message(message):
         )
         embed.set_image(url='https://i.imgur.com/Wf1J7Ur.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":41:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/wx4DDx8.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":42:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/POgnrvw.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":43:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/N2u1tIl.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":44:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/nux88ht.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+ 
+    if ":45:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/OsYzTtq.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+ 
+    if ":46:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/vzpjTT8.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":47:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/op71BO3.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
      
