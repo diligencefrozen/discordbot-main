@@ -231,43 +231,66 @@ async def on_message_delete(message):
     embed.set_footer(text=f"{message.guild.name} | {time}")
     await channel.send(embed=embed)
 
-    
 @app.event
 async def on_message(message):
 
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
+    # 봇이 자신의 메시지를 검열하지 않도록 방지
     if message.author.bot:
-     return
+        return
 
+    # 명령어 감지 / 2024.09.14 수정  
     if message.content.startswith("=명령어"):
-        channel = message.channel
         embed = discord.Embed(
-            title = 'List of commands',
-            description = '도리봇은 당신과 소통하길 원합니다.',
-            colour = discord.Colour.red()
+            title="📜 명령어 리스트",
+            description="도리봇은 당신의 채팅에 귀 기울이고 있답니다.",
+            colour=discord.Colour.red()
         )
 
         dtime = datetime.datetime.now(timezone('Asia/Seoul'))
-        embed.set_footer(text=str(dtime.year)+" 년 "+str(dtime.month)+" 월 "+str(dtime.day)+" 일 "+str(dtime.hour)+" 시 "+str(dtime.minute)+" 분 "+str(dtime.second)+" 초 ")  
-        embed.add_field(name ='=버전', value = "도리봇의 패치 버전을 확인할수 있습니다.",inline = False)
-        embed.add_field(name ='=오늘의운세', value = "오늘의 운세를 점쳐보세요.",inline = False)
-        embed.add_field(name ='=오늘의시한편', value = "지친 하루 시 한편과 함께 마음을 달래보세요.",inline = False)   
-        embed.add_field(name ='=오늘의음식', value = "오늘 먹을 음식을 도리봇이 선택해줍니다.",inline = False)
-        embed.add_field(name ='=MBTI', value = "MBTI에 대한 정보가 궁금하세요?",inline = False)      
-        embed.add_field(name ='=허락', value = "도리봇이 오늘 게임을 해도 되는 날인지 점을 쳐줄것입니다.",inline = False)  
-        embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False)  
-        await message.channel.send(channel,embed=embed)                                                    
+        embed.set_footer(
+            text=f"{dtime.year} 년 {dtime.month} 월 {dtime.day} 일 {dtime.hour} 시 {dtime.minute} 분 {dtime.second} 초"
+        )
 
-# 파일 업로드 감지 / 2024.09.13 수정   
-# 비동기 이벤트 함수에서만 await 사용 가능
-@app.event
 
-async def on_message(message):
-    
-    #봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
+        embed.add_field(
+            name="📝 =버전",
+            value="도리봇의 최신 패치 버전을 확인할 수 있습니다.",
+            inline=False
+        )
+        embed.add_field(
+            name="🔮 =오늘의운세",
+            value="오늘의 운세를 확인하세요.",
+            inline=False
+        )
+        embed.add_field(
+            name="📖 =오늘의시한편",
+            value="지친 하루를 시 한편과 함께 달래보세요.",
+            inline=False
+        )
+        embed.add_field(
+            name="🍽️ =오늘의음식",
+            value="오늘 먹을 음식을 도리봇이 선택해줍니다.",
+            inline=False
+        )
+        embed.add_field(
+            name="🧠 =MBTI",
+            value="MBTI에 대한 정보를 확인하세요.",
+            inline=False
+        )
+        embed.add_field(
+            name="🎮 =허락",
+            value="오늘 게임을 해도 되는 날인지 점쳐봅니다.",
+            inline=False
+        )
+        embed.add_field(
+            name="📊 =서버분석",
+            value="서버 내에서 가장 많이 언급된 단어들을 분석합니다.",
+            inline=False
+        )
+
+        await message.channel.send(embed=embed)
+
+    # 파일 업로드 감지 / 2024.09.14 수정  
     if message.attachments:
         for attachment in message.attachments:
             supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
@@ -289,22 +312,43 @@ async def on_message(message):
                 else:
                     embed.add_field(name="파일 다운로드", value=f"[여기 클릭]({attachment.url})", inline=False)
 
-                # 비동기 함수 내에서 await 사용 가능
                 await message.channel.send(embed=embed)
 
+    # 성적인 키워드 감지 / 2024.09.14 수정  
+    if any(pattern.search(message.content) for pattern in girl_patterns):
+        dtime = datetime.datetime.now(timezone('Asia/Seoul'))
+        time_str = dtime.strftime("%Y년 %m월 %d일 %H시 %M분 %S초")
 
-    
-# 사용자가 다른 사용자의 메시지에 답장하면, 봇이 대응합니다. / 2024.09.13 수정 
+        embed = discord.Embed(
+            title="🚨 경고: 성적인 내용 감지 🚨",
+            description=f"{message.author.mention} 매우 불결한 \n\n내용이 감지되었습니다.",
+            color=0xff0000,
+            timestamp=dtime
+        )
 
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
+        embed.add_field(name="시간", value=time_str, inline=False)
+        random_warning = random.choice(warning_messages)
+        embed.add_field(name="경고", value=random_warning, inline=False)
+        embed.set_footer(text="반복적인 위반 시 추가적인 조치가 있을 수 있습니다.")
+        await message.channel.send(embed=embed)
+
+    # 사용자 멘션 감지 / 2024.09.14 수정  
+    if message.mentions:
+        mentioned_users = ", ".join([user.mention for user in message.mentions])
+
+        embed = discord.Embed(
+            title="📢 멘션 감지 📢",
+            description=f"{message.author.mention} 님이 \n\n{mentioned_users} 님을 호출했습니다.",
+            color=0x00ff00
+        )
+        embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
+        embed.set_footer(text="멘션을 확인했습니다.")
+        await message.channel.send(embed=embed)
+
+    # 답장 감지 / 2024.09.14 수정  
     if message.reference:
-        # 답장 대상 메시지를 가져오기
         replied_message = await message.channel.fetch_message(message.reference.message_id)
-        
-        # 답장을 감지하고 반응
+
         embed = discord.Embed(
             title="💬 답장 감지 💬",
             description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 메시지에 \n\n답장을 달았습니다.",
@@ -314,15 +358,9 @@ async def on_message(message):
         embed.add_field(name="원본 메시지", value=replied_message.content, inline=False)
         embed.set_footer(text="답장을 확인했습니다.")
         await message.channel.send(embed=embed)
-    
-# 영어 채팅 감지 / 2024.09.13 수정 
 
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
+    # 영어 채팅 감지  / 2024.09.14 수정  
     if re.search(r'[a-zA-Z]', message.content):
-        # 영어 채팅에 대한 반응
         embed = discord.Embed(
             title="📢 영어 감지 📢",
             description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
@@ -381,59 +419,6 @@ async def on_message(message):
         print("랜덤수 값 :" + str(randomNum))
         print(emoji[randomNum])
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))   
-
-#성 적인 키워드에 대응합니다. / 2024.09.13 수정        
-
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
-    if any(pattern.search(message.content) for pattern in girl_patterns):
-        # await message.delete()
-
-        # 현재 시간 표시
-        dtime = datetime.datetime.now(timezone('Asia/Seoul'))
-        time_str = dtime.strftime("%Y년 %m월 %d일 %H시 %M분 %S초")
-
-        # 임베드 메시지 디자인
-        embed = discord.Embed(
-            title="🚨 경고: 성 적인 내용 감지 🚨",
-            description=f"{message.author.mention} 매우 불결한 내용이 \n\n감지되었습니다.",
-            color=0xff0000,
-            timestamp=dtime
-        )
-        
-        # 시간 추가
-        embed.add_field(name="시간", value=time_str, inline=False)
-
-        # 랜덤 경고 메시지 추가
-        random_warning = random.choice(warning_messages)
-        embed.add_field(name="경고", value=random_warning, inline=False)
-
-        # 추가적인 사용자 안내 메시지
-        embed.set_footer(text="반복적인 위반 시 추가적인 조치가 있을 수 있습니다.")
-
-        # 채널에 임베드 메시지 전송
-        await message.channel.send(embed=embed)
-
-# 서버 사용자가 다른 서버 사용자를 멘션하면, 봇이 대응 합니다. / 2024.09.13 수정
-
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
-    if message.mentions:
-        mentioned_users = ", ".join([user.mention for user in message.mentions])
-
-        # 멘션에 반응 - 이미지 포함
-        embed = discord.Embed(
-            title="📢 멘션 감지 📢",
-            description=f"{message.author.mention} 님이 \n\n{mentioned_users} 님을 호출했습니다.",
-            color=0x00ff00
-        )
-        embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
-        embed.set_footer(text="멘션을 확인했습니다.")
-        await message.channel.send(embed=embed)
     
  #음식을 추천합니다. / 2023.08.16 수정        
 
