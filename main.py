@@ -299,13 +299,12 @@ async def on_message(message):
 
             if any(attachment.filename.lower().endswith(ext) for ext in supported_extensions):
                 embed = discord.Embed(
-                    title="📁 파일 업로드 알림",
+                    title="📁 해당 기능은 Beta 버전입니다.",
                     description=f"{message.author.mention} 님이 파일을 업로드했습니다.",
                     color=0x00ff00
                 )
                 embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
                 embed.set_footer(text="파일 업로드를 확인했습니다.")
-                embed.set_footer(text="파일 다운로드는 제한 시간이 존재합니다.")
 
                 if attachment.filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
                     embed.set_image(url=attachment.url)
@@ -320,7 +319,7 @@ async def on_message(message):
         time_str = dtime.strftime("%Y년 %m월 %d일 %H시 %M분 %S초")
 
         embed = discord.Embed(
-            title="🚨 경고: 성적인 내용 감지 🚨",
+            title="🚨 해당 기능은 Beta 버전입니다.",
             description=f"{message.author.mention} 매우 불결한 \n\n내용이 감지되었습니다.",
             color=0xff0000,
             timestamp=dtime
@@ -337,7 +336,7 @@ async def on_message(message):
         mentioned_users = ", ".join([user.mention for user in message.mentions])
 
         embed = discord.Embed(
-            title="📢 멘션 감지 📢",
+            title="📢 해당 기능은 Beta 버전입니다.",
             description=f"{message.author.mention} 님이 \n\n{mentioned_users} 님을 호출했습니다.",
             color=0x00ff00
         )
@@ -350,7 +349,7 @@ async def on_message(message):
         replied_message = await message.channel.fetch_message(message.reference.message_id)
 
         embed = discord.Embed(
-            title="💬 답장 감지 💬",
+            title="💬 해당 기능은 Beta 버전입니다.",
             description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 \n\n메시지에 답장을 달았습니다.",
             color=0x00ff00
         )
@@ -362,7 +361,7 @@ async def on_message(message):
     # 영어 채팅 감지  / 2024.09.14 수정  
     if re.search(r'[a-zA-Z]', message.content):
         embed = discord.Embed(
-            title="📢 영어 감지 📢",
+            title="📢 해당 기능은 Beta 버전입니다.",
             description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
             color=0x00ff00
         )
