@@ -363,7 +363,7 @@ async def on_message(message):
         embed = discord.Embed(
             title="📢 해당 기능은 Beta 버전입니다.",
             description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
-            color=0x00ff00
+            color=0xfefe00
         )
         embed.add_field(name="메시지 내용", value=message.content, inline=False)
         embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
