@@ -366,7 +366,7 @@ async def on_message(message):
             color=0x00ff00
         )
         embed.add_field(name="메시지 내용", value=message.content, inline=False)
-        embed.set_image(url="https://i.imgur.com/XxOa9xF.jpeg")
+        embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
         embed.set_footer(text="대한민국의 자랑, 한국어를 애용합시다.")
         await message.channel.send(embed=embed)
      
