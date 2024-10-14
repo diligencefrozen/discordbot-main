@@ -40,7 +40,7 @@ focusing solely on essential functionalities that fit within free service limits
 
 ## Minor Emoji Features
 <pre>
-<img src="https://">
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/ASM(10142024).PNG?raw=true">
 </pre>
 
 ## Features for minor user experiences
