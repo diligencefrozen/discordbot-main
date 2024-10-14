@@ -24,6 +24,24 @@ To keep it free to operate,
 the bot's features have been minimized, 
 focusing solely on essential functionalities that fit within free service limits.
 </pre>
+
+# Main Features
+
+## Prohibited Word
+<pre>
+<img src="https://">
+</pre>
+
+## Minor Emoji Features
+<pre>
+<img src="https://">
+</pre>
+
+## Features for minor user experiences
+<pre>
+<img src="https://">
+</pre>
+
 # Screenshots
 <pre>
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/4.PNG?raw=true">
