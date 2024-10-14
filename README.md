@@ -45,7 +45,23 @@ focusing solely on essential functionalities that fit within free service limits
 
 ## Features for minor user experiences
 <pre>
-<img src="https://">
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/ASM(241014)3.PNG?raw=true">
+</pre>
+
+<pre>
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/BSM(241014)3.PNG?raw=true">
+</pre>
+
+<pre>
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/BSM(241014)4.PNG?raw=true">
+</pre>
+
+<pre>
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/BSM(241014)6.PNG?raw=true">
+</pre>
+
+<pre>
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/BSM(241014)7.PNG?raw=true">
 </pre>
 
 # Frequently Mentioned Words
