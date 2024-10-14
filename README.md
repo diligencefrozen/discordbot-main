@@ -27,7 +27,7 @@ focusing solely on essential functionalities that fit within free service limits
 
 ## Prohibited Word
 <pre>
-<img src="https://">
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/4.PNG?raw=true">
 </pre>
 
 ## Minor Emoji Features
@@ -38,11 +38,6 @@ focusing solely on essential functionalities that fit within free service limits
 ## Features for minor user experiences
 <pre>
 <img src="https://">
-</pre>
-
-# Screenshots
-<pre>
-<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/4.PNG?raw=true">
 </pre>
 
 # Frequently Mentioned Words
