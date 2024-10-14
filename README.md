@@ -31,11 +31,11 @@ focusing solely on essential functionalities that fit within free service limits
 </pre>
 
 <pre>
-<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/20211014.PNG?raw=true">
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/ASM(20241014).PNG?raw=true">
 </pre>
 
 <pre>
-<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/20221014.PNG?raw=true">
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/BSM(20241014).PNG?raw=true">
 </pre>
 
 ## Minor Emoji Features
