@@ -30,6 +30,14 @@ focusing solely on essential functionalities that fit within free service limits
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/4.PNG?raw=true">
 </pre>
 
+<pre>
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/20211014.PNG?raw=true">
+</pre>
+
+<pre>
+<img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/20221014.PNG?raw=true">
+</pre>
+
 ## Minor Emoji Features
 <pre>
 <img src="https://">
