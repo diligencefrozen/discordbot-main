@@ -502,7 +502,7 @@ async def on_message(message):
     if ":dccon:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x3498db  # 파란색
         )
@@ -514,7 +514,7 @@ async def on_message(message):
     if ":01:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -526,7 +526,7 @@ async def on_message(message):
     if ":02:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -538,7 +538,7 @@ async def on_message(message):
     if ":03:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -550,7 +550,7 @@ async def on_message(message):
     if ":04:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -562,7 +562,7 @@ async def on_message(message):
     if ":05:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -574,7 +574,7 @@ async def on_message(message):
     if ":06:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -586,7 +586,7 @@ async def on_message(message):
     if ":07:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -598,7 +598,7 @@ async def on_message(message):
     if ":08:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -610,7 +610,7 @@ async def on_message(message):
     if ":09:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -622,7 +622,7 @@ async def on_message(message):
     if ":10:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -634,7 +634,7 @@ async def on_message(message):
     if ":11:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -646,7 +646,7 @@ async def on_message(message):
     if ":12:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -658,7 +658,7 @@ async def on_message(message):
     if ":13:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -670,7 +670,7 @@ async def on_message(message):
     if ":14:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -682,7 +682,7 @@ async def on_message(message):
     if ":15:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -694,7 +694,7 @@ async def on_message(message):
     if ":16:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -706,7 +706,7 @@ async def on_message(message):
     if ":17:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -718,7 +718,7 @@ async def on_message(message):
     if ":18:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -730,7 +730,7 @@ async def on_message(message):
     if ":19:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -742,7 +742,7 @@ async def on_message(message):
     if ":20:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')       
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -754,7 +754,7 @@ async def on_message(message):
     if ":21:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -766,7 +766,7 @@ async def on_message(message):
     if ":22:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -778,7 +778,7 @@ async def on_message(message):
     if ":23:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -790,7 +790,7 @@ async def on_message(message):
     if ":24:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -802,7 +802,7 @@ async def on_message(message):
     if ":25:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -814,7 +814,7 @@ async def on_message(message):
     if ":26:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -826,7 +826,7 @@ async def on_message(message):
     if ":27:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -838,7 +838,7 @@ async def on_message(message):
     if ":28:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -850,7 +850,7 @@ async def on_message(message):
     if ":29:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -862,7 +862,7 @@ async def on_message(message):
     if ":30:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -874,7 +874,7 @@ async def on_message(message):
     if ":31:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -886,7 +886,7 @@ async def on_message(message):
     if ":32:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -898,7 +898,7 @@ async def on_message(message):
     if ":33:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -910,7 +910,7 @@ async def on_message(message):
     if ":34:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -922,7 +922,7 @@ async def on_message(message):
     if ":35:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -934,7 +934,7 @@ async def on_message(message):
     if ":36:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -946,7 +946,7 @@ async def on_message(message):
     if ":37:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -958,7 +958,7 @@ async def on_message(message):
     if ":38:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -970,7 +970,7 @@ async def on_message(message):
     if ":39:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
@@ -982,7 +982,7 @@ async def on_message(message):
     if ":40:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C    
         )
@@ -994,7 +994,7 @@ async def on_message(message):
     if ":41:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
@@ -1006,7 +1006,7 @@ async def on_message(message):
     if ":42:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
@@ -1018,7 +1018,7 @@ async def on_message(message):
     if ":43:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
@@ -1030,7 +1030,7 @@ async def on_message(message):
     if ":44:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
@@ -1042,7 +1042,7 @@ async def on_message(message):
     if ":45:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
@@ -1054,7 +1054,7 @@ async def on_message(message):
     if ":46:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
@@ -1066,7 +1066,7 @@ async def on_message(message):
     if ":47:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
-            title='해당 기능은 Beta 버전입니다.',
+            title='🔎 해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
