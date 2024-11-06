@@ -16,6 +16,7 @@ from discord.ext import commands, tasks
 from urllib.request import URLError, HTTPError, urlopen, Request
 from bs4 import BeautifulSoup
 from pytz import timezone
+from discord import Embed
 
 intents = discord.Intents.default()
 intents.messages = True
@@ -369,14 +370,12 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         return  # 중단
 
-    # 링크 검열 및 영어 감지 / 2024.11.07 수정  
+# 링크 검열 및 영어 감지 / 2024.11.07 수정  
 
     allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662, 1176877764608004156]
 
-    # 서울 시간대 설정
     seoul_tz = timezone('Asia/Seoul')
 
-    # 링크 감지 및 삭제
     if message.channel.id in allowed_channels:
         if any(keyword in message.content for keyword in ["https://", "http://", "youtu.be", "youtube", "gall.dcinside.com", "news.naver.com", "news.v.daum.net"]):
             try:
@@ -404,12 +403,9 @@ async def on_message(message):
         )
         embed.add_field(name="📝 메시지 내용", value=message.content, inline=False)
         embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
-        embed.set_footer(text=f"도리봇 알림 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return  # 영어 채팅 감지 후 기능 중단
-
-    # 봇이 명령어를 처리할 수 있도록 함
-    await app.process_commands(message)
      
  #사용자의 웃음관련 키워드에 반응함 / 2023.08.16 수정   
  
