@@ -369,19 +369,47 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         return  # 중단
 
-    # 영어 채팅 감지  / 2024.11.02 수정  
+    # 링크 검열 및 영어 감지 / 2024.11.07 수정  
+
+    allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662, 1176877764608004156]
+
+    # 서울 시간대 설정
+    seoul_tz = timezone('Asia/Seoul')
+
+    # 링크 감지 및 삭제
+    if message.channel.id in allowed_channels:
+        if any(keyword in message.content for keyword in ["https://", "http://", "youtu.be", "youtube", "gall.dcinside.com", "news.naver.com", "news.v.daum.net"]):
+            try:
+                await message.delete()
+                warning_embed = discord.Embed(
+                    title="🚫 해당 기능은 Beta 버전입니다.",
+                    description=f"{message.author.mention} 님, 링크 공유는 금지되어 있습니다.",
+                    color=discord.Color.red()
+                )
+                warning_embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+                await message.channel.send(embed=warning_embed)
+            except discord.Forbidden:
+                print("봇이 메시지를 삭제할 권한이 없습니다.")
+            except Exception as e:
+                print(f"메시지를 삭제하는 동안 오류 발생: {e}")
+            return  # 링크 감지 후 기능 중단
+
+    # 영어 채팅 감지
     if re.search(r'[a-zA-Z]', message.content):
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title="📢 해당 기능은 Beta 버전입니다.",
-            description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
-            color=0xfefe00
+            description=f"{message.author.mention} 님께서 영어로 채팅하셨습니다.",
+            color=discord.Color.gold()
         )
-        embed.add_field(name="메시지 내용", value=message.content, inline=False)
+        embed.add_field(name="📝 메시지 내용", value=message.content, inline=False)
         embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 알림 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
-        return  # 중단
+        return  # 영어 채팅 감지 후 기능 중단
+
+    # 봇이 명령어를 처리할 수 있도록 함
+    await app.process_commands(message)
      
  #사용자의 웃음관련 키워드에 반응함 / 2023.08.16 수정   
  
@@ -1473,12 +1501,12 @@ async def on_message(message):
 
 #사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2023.09.25 수정 
 
-    allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662, 1176877764608004156]
+   #allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662, 1176877764608004156]
 
-    if message.channel.id in allowed_channels:
-        if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
-            await message.delete()
-            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
+   #if message.channel.id in allowed_channels:
+       #if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
+           #await message.delete()
+           #await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
                                                   
 #총기 이름에 대응함./ 2023.10.29 수정 
 
