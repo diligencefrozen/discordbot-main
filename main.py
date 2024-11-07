@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from pytz import timezone
 from discord import Embed
 
-intents = discord.Intents.default()
+intents = discord.Intents.default() 
 intents.messages = True
 intents.message_content = True
 intents.guilds = True
