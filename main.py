@@ -1496,7 +1496,7 @@ async def handle_link_deletion(message):
             # Embed 형식의 경고 메시지 생성
             current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
             embed = Embed(
-                title="🚫 링크 공유 금지",
+                title="🚫 해당 기능은 Beta 버전입니다.",
                 description=f"{message.author.mention} 님, 이 채널에서는 링크를 공유할 수 없습니다.",
                 color=0xFF0000
             )
