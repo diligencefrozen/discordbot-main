@@ -16,9 +16,8 @@ from discord.ext import commands, tasks
 from urllib.request import URLError, HTTPError, urlopen, Request
 from bs4 import BeautifulSoup
 from pytz import timezone
-from discord import Embed
 
-intents = discord.Intents.default() 
+intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
 intents.guilds = True
@@ -1474,42 +1473,14 @@ async def on_message(message):
     if "자살" in message.content or "죽고싶다" in message.content or "질소가스" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 우울감 등 말하기 어려운 고민이 있거나 주변에 이런 어려움을 겪는 가족ㆍ지인이 있을 경우 자살예방 상담전화 1393, 정신건강 상담전화 1577-0199, 희망의 전화 129, 생명의 전화 1588-9191, 청소년 전화 1388, 청소년 모바일 상담 ‘다 들어줄게’ 앱, 카카오톡 등에서 24시간 전문가의 상담을 받을 수 있습니다.")
 
-#사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2024.11.08 수정 
+#사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2023.09.25 수정 
 
-allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662, 1176877764608004156]
+    allowed_channels = [944520863389208606, 1098896878768234556, 1064823080100306995, 932654164201336872, 989509986793168926, 944522706894872606, 1134766793249013780, 802904099816472619, 820536422808944662, 1176877764608004156]
 
-   #if message.channel.id in allowed_channels:
-       #if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
-           #await message.delete()
-           #await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
-
-
-# 메시지에 링크가 포함된 경우 경고 및 삭제
-async def handle_link_deletion(message):
     if message.channel.id in allowed_channels:
-        link_patterns = ["https://", "http://", "youtu.be", "youtube", 
-                         "gall.dcinside.com", "news.naver.com", "news.v.daum.net"]
-
-        if any(link in message.content for link in link_patterns):
+        if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
             await message.delete()
-            
-            # Embed 형식의 경고 메시지 생성
-            current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
-            embed = Embed(
-                title="🚫 해당 기능은 Beta 버전입니다.",
-                description=f"{message.author.mention} 님, 이 채널에서는 \n\n링크를 공유할 수 없습니다.",
-                color=0xFF0000
-            )
-            embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
-            await message.channel.send(embed=embed)
-
-@app.event
-async def on_message(message):
-    if message.author.bot:
-        return
-    
-    # 링크 감지 및 삭제 함수 호출
-    await handle_link_deletion(message)
+            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
                                                   
 #총기 이름에 대응함./ 2023.10.29 수정 
 
