@@ -47,7 +47,7 @@ app = discord.Client(intents=intents)
  
 #@send_notification.before_loop
 #async def before_send_notification():
-    #await app.wait_until_ready()  # Wait until the bot logs in
+    #await app.wait_until_ready()  # Wait until the bot logs in           
 
 
 banned_patterns = [
