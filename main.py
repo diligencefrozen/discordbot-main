@@ -369,7 +369,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         return  # 중단
 
-    # 영어 채팅 감지  / 2024.11.07 수정 
+    # 영어 채팅 감지  / 2025.01.28 수정 
      
     # 영어 단어만 감지하고 URL 형식은 제외
     if re.search(r'\b[a-zA-Z]+\b', message.content) and not re.search(r'https?://', message.content):
@@ -380,7 +380,7 @@ async def on_message(message):
             color=0xfefe00
         )
         embed.add_field(name="메시지 내용", value=message.content, inline=False)
-        embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
+        embed.set_image(url="https://iili.io/2QqLl7R.jpg")
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return  # 기능 중단
