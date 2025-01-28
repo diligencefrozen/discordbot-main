@@ -1,13 +1,13 @@
 # tbBOT - teddy bear BOT
 
-<b><p>
+<p>
 There will be no further major updates, <s>only minor ones.</s><br/><br/>
 In August 2021, a Discord announcement mentioned the end of support for newer Python versions.<br/><br/>
 This means Python up to version 3.9 will still be supported,<br/><br/>
 but support for 3.10 and above has been discontinued.<br/><br/>
 If we need more features down the line, I’m considering rewriting the bot<br/><br/>
 from scratch in either C# or JavaScript.<br/>
-</p></b>
+</p>
 
 # Introducing tbBOT
 
