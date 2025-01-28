@@ -1,27 +1,25 @@
-# tbBOT -teddy bear BOT
-  <p><b>이제 더이상의 메이저 업데이트는 없습니다. <s>마이너 업데이트들은 존재합니다</s></p><p>
-  2021년 8월달 이후로 디스코드에서는 밝혔습니다. 파이썬의 새로운 버전의 지원종료 소식을 말이죠.</p><p><s>구 버전, 즉 3.9번대 버전까지는 지원하고, 3.10번대 버전부터는 지원 종료입니다.</s></p><p>
-  더 추가해야될 기능이 존재한다면 C# 또는 자바스크립트로 처음부터 다시 코드를 짜려고 합니다.</p></b><br/>
-  
-<b><p>There will be no more major updates, <s>only minor ones.</s><br/><br/>
-Back in August 2021,<br/><br/> it was announced on Discord<br/><br/>
-about the end of support for newer versions of Python.<br/><br/>
-It means that versions up to 3.9 will be supported,<br/><br/>
-but from 3.10 onwards, the support is discontinued.<br/><br/>
-If there's a need to add more features,<br/><br/> 
-I'm considering rewriting the code <br/><br/>
-from scratch using either C# or JavaScript.<br/>
+# tbBOT - teddy bear BOT
+
+<b><p>
+There will be no further major updates, <s>only minor ones.</s><br/><br/>
+In August 2021, a Discord announcement mentioned the end of support for newer Python versions.<br/><br/>
+This means Python up to version 3.9 will still be supported,<br/><br/>
+but support for 3.10 and above has been discontinued.<br/><br/>
+If we need more features down the line, I’m considering rewriting the bot<br/><br/>
+from scratch in either C# or JavaScript.<br/>
 </p></b>
 
-# Introducing <s>기존</s> tbBOT( 도리봇 )
+# Introducing tbBOT
 
-<b><p>This Python based Discord bot automates and enhances interactions within a server.<br/><br/> 
-Leveraging the Discord API, it implements custom commands,<br/><br/> 
-manages events, and engages users to improve the overall user experience<br/><br/> 
-and streamline server management. To keep it free to operate,<br/><br/> 
-the bot's features have been minimized,<br/><br/> 
-focusing solely on essential functionalities that fit within free service limits.<br/><br/>
+<b><p>
+This Python-based Discord bot automates and enhances server interactions.<br/><br/>
+By leveraging the Discord API, it implements custom commands,<br/><br/>
+manages events, and engages users, streamlining server operations<br/><br/>
+and elevating the overall user experience.<br/><br/>
+To keep it free to operate, the bot’s features have been minimized,<br/><br/>
+focusing only on essential functionalities that fit within free service limits.<br/><br/>
 </p></b>
+
 
 # Main Features
 
