@@ -499,7 +499,7 @@ async def on_message(message):
     if "리앙쿠르" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 리앙쿠르 암초는 일본해에 있으며 대한민국의 최동단에 있는 섬입니다. 대한민국의 영토이나, 일본이 영토(영유권) 주장을 하고 있는 영토 분쟁 지역이죠. 국제법상으로는 한국의 실효지배상태입니다. ")    
      
-#이모지 크기를 늘려줍니다. / 2025.01.12 수정  
+#이모지 크기를 늘려줍니다. / 2025.01.28 수정  
 
     if ":dccon:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
@@ -520,7 +520,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/KxDrCqt.png')
+        embed.set_image(url='https://iili.io/2QqWlrG.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return    
@@ -532,7 +532,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/ez0OWAI.png')
+        embed.set_image(url='https://iili.io/2QqWaBn.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -544,7 +544,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/UuGxOBl.png')
+        embed.set_image(url='https://iili.io/2QqW7LX.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -556,7 +556,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/INWm8aV.png')
+        embed.set_image(url='https://iili.io/2QqW5Xt.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -568,7 +568,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/agbibNb.png')
+        embed.set_image(url='https://iili.io/2QqW12f.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -580,7 +580,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/wySCccH.png')
+        embed.set_image(url='https://iili.io/2QqWGkl.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -592,7 +592,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/sHOqnE6.png')
+        embed.set_image(url='https://iili.io/2QqWMp2.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return   
@@ -604,7 +604,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/AJJLpJG.png')
+        embed.set_image(url='https://iili.io/2QqWWIS.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -616,7 +616,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/hPCx7Rx.png')
+        embed.set_image(url='https://iili.io/2QqWXh7.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -628,7 +628,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/xCEAhkU.png')
+        embed.set_image(url='https://iili.io/2QqWhQ9.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -640,7 +640,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/nys0JDT.png')
+        embed.set_image(url='https://iili.io/2QqWwBe.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -652,7 +652,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/j4g6CaM.png')
+        embed.set_image(url='https://iili.io/2QqWNEu.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return     
@@ -664,7 +664,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/EG3jR34.png')
+        embed.set_image(url='https://iili.io/2QqWOrb.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -676,7 +676,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/oJbdZiD.png')
+        embed.set_image(url='https://iili.io/2QqWk2j.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -688,7 +688,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/ZI0yxmO.png')
+        embed.set_image(url='https://iili.io/2QqWvYx.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -700,7 +700,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/uzKe6ic.png')
+        embed.set_image(url='https://iili.io/2QqW8kQ.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -712,7 +712,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/VKpm4SX.png')
+        embed.set_image(url='https://iili.io/2QqWgTB.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return  
@@ -724,7 +724,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/X12GB1g.png')
+        embed.set_image(url='https://iili.io/2QqWrhP.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -736,7 +736,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/C2NXJIg.png')
+        embed.set_image(url='https://iili.io/2QqW4Q1.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -748,7 +748,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/9tVXXLK.png')
+        embed.set_image(url='https://iili.io/2QqWPCF.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -760,7 +760,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/tw9k8V9.png')
+        embed.set_image(url='https://iili.io/2QqWiEg.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -772,7 +772,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/EsiVmMr.png')
+        embed.set_image(url='https://iili.io/2QqWs4a.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -784,7 +784,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/940nKsR.png')
+        embed.set_image(url='https://iili.io/2QqWQ3J.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -796,7 +796,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/PTKlxKy.png')
+        embed.set_image(url='https://iili.io/2QqWZYv.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -808,7 +808,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/zu5fESz.png')
+        embed.set_image(url='https://iili.io/2QqWtvR.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -820,7 +820,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/bWoGfAt.png')
+        embed.set_image(url='https://iili.io/2QqWDpp.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -832,7 +832,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/ArSWQV4.png')
+        embed.set_image(url='https://iili.io/2QqWmTN.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -844,7 +844,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/yUuAwPe.png')
+        embed.set_image(url='https://iili.io/2QqWpjI.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -856,7 +856,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/MJyBVyU.png')
+        embed.set_image(url='https://iili.io/2QqWyQt.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return   
@@ -868,7 +868,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/LkdjkDL.png')
+        embed.set_image(url='https://iili.io/2QqXHCX.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -880,7 +880,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/oop7Blt.png')
+        embed.set_image(url='https://iili.io/2QqXJGn.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -892,7 +892,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/8DjMRDR.png')
+        embed.set_image(url='https://iili.io/2QqXd4s.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return     
@@ -904,7 +904,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/A45cqvB.png')
+        embed.set_image(url='https://iili.io/2QqX33G.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -916,7 +916,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/faCZ6mQ.png')
+        embed.set_image(url='https://iili.io/2QqXFaf.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -928,7 +928,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/TF2bxSI.png')
+        embed.set_image(url='https://iili.io/2QqXKv4.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -940,7 +940,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/qJr28dU.png')
+        embed.set_image(url='https://iili.io/2QqXfyl.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -952,7 +952,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/ZGbSP1Z.png')
+        embed.set_image(url='https://iili.io/2QqXBu2.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return   
@@ -964,7 +964,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/ifieoeO.png')
+        embed.set_image(url='https://iili.io/2QqXCjS.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return 
@@ -976,7 +976,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/ocW5koe.png')
+        embed.set_image(url='https://iili.io/2QqXnZ7.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -988,7 +988,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://i.imgur.com/9EsrmLZ.png')
+        embed.set_image(url='https://iili.io/2QqXxn9.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1000,7 +1000,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C    
         )
-        embed.set_image(url='https://i.imgur.com/EoB4sVg.png')
+        embed.set_image(url='https://iili.io/2QqXzGe.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1012,7 +1012,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/Z714FM3.png')
+        embed.set_image(url='https://iili.io/2QqXI6u.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1024,7 +1024,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/nvrZ5xE.png')
+        embed.set_image(url='https://iili.io/2QqXu3b.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1036,7 +1036,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/Y2LaDKZ.png')
+        embed.set_image(url='https://iili.io/2QqXAaj.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1048,7 +1048,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/yn9Jxut.png')
+        embed.set_image(url='https://iili.io/2QqXR8x.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1060,7 +1060,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/CHZSjPb.png')
+        embed.set_image(url='https://iili.io/2QqX5yQ.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1072,7 +1072,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/MAV5W9a.png')
+        embed.set_image(url='https://iili.io/2QqXYuV.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1084,7 +1084,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/leT3Dp3.png')
+        embed.set_image(url='https://iili.io/2QqXawB.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1096,7 +1096,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/kmtNSxo.png')
+        embed.set_image(url='https://iili.io/2QqXcZP.png')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -1108,7 +1108,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0xE2E8F7  
         )
-        embed.set_image(url='https://i.imgur.com/Aah09rf.jpeg')
+        embed.set_image(url='https://iili.io/2QqX0n1.jpg')
         embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
