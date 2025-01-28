@@ -41,7 +41,7 @@ focusing only on essential functionalities that fit within free service limits.<
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/ASM(10142024).PNG?raw=true">
 </pre>
 
-## Features for minor user experiences
+## Minor User Experience Features
 <pre>
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/ASM(241014)3.PNG?raw=true">
 </pre>
@@ -68,9 +68,20 @@ focusing only on essential functionalities that fit within free service limits.<
 <img src="https://github.com/diligencefrozen/discordbot-main/blob/main/ss/ASM_02.png?raw=true">
 </pre>
 
-# LANGUAGE
-<pre>
-<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
-</pre>
+## Environment & Dependencies
+
+- **Python Version:** 3.9  
+- **Libraries & Versions:**
+  - `discord.py==2.3.2`
+  - `beautifulsoup4==4.9.3`
+  - `requests==2.25.1`
+  - `urllib3==1.26.2`
+  - `pynacl==1.4.0`
+  - `lxml` (latest)
+  - `pytz` (latest)
+  - `Pillow` (latest)
+
+These libraries power the bot’s core functionality—everything from handling Discord interactions to making web requests. If you’re using Python 3.9, make sure these dependencies are installed and up to date for the best experience.
+
 
 
